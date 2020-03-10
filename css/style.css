@@ -4,8 +4,13 @@ body {
     color: maroon;
 }
 
-p {
+div {
+    margin-top: 500px;
+}
+
+article {
     font-family: Arial;
+    float: left;
 }
 
 text {
