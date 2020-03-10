@@ -37,13 +37,86 @@ var customerArray = [];
         console.log('Total customer Iterations' + totalCustomerIterations)
         console.log('cookie array' + cookieArray);
         console.log('Total Cookie Iterations' + totalCookieIterations);
-
-
+    
+        switch (index) {
+          case 0:  
+            var item1DisplaybyElement = document.getElementById('item1');
+            var hour1 = document.createElement('li');
+            hour1.textContent = "6 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour1);
+            break;
+          case 1: 
+            var hour2 = document.createElement('li');
+            hour2.textContent = "7 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour2);
+            break;
+          case 2: 
+            var hour3 = document.createElement('li');
+            hour3.textContent = "8 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour3);
+            break;
+          case 3: 
+            var hour4 = document.createElement('li');
+            hour4.textContent = "9 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour4);
+            break;
+          case 4: 
+            var hour5 = document.createElement('li');
+            hour5.textContent = "10 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour5);
+            break;
+          case 5: 
+            var hour6 = document.createElement('li');
+            hour6.textContent = "11 am " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour6);
+            break;
+          case 6: 
+            var hour7 = document.createElement('li');
+            hour7.textContent = "12 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour7);
+            break;
+          case 7: 
+            var hour8 = document.createElement('li');
+            hour8.textContent = "1 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour8);
+            break;
+          case 8: 
+            var hour9 = document.createElement('li');
+            hour9.textContent = "2 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour9);
+            break;
+          case 9: 
+            var hour10 = document.createElement('li');
+            hour10.textContent = "3 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour10);
+            break;
+          case 10: 
+            var hour11 = document.createElement('li');
+            hour11.textContent = "4 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour11);
+            break;
+          case 11: 
+            var hour12 = document.createElement('li');
+            hour12.textContent = "5 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour12);
+            break;
+          case 12: 
+            var hour13 = document.createElement('li');
+            hour13.textContent = "6 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour13);
+            break;
+          case 13: 
+            var hour14 = document.createElement('li');
+            hour14.textContent = "7 pm " + cookiesAndCustomersPerHour[1];
+            item1DisplaybyElement.appendChild(hour14);
+            var totalSales = document.createElement('li');
+            totalSales.textContent = "Total: " + totalCookieIterations;
+            item1DisplaybyElement.appendChild(totalSales);
+            break;
+        }
     }
 
-    
-
-}
+} 
 }
 
 store1.totalDaySalesTracker();
