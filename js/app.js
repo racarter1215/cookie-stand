@@ -103,7 +103,7 @@ StoreMaker.prototype.totalDaySalesTracker = function() {
         hour14.textContent = "7 pm: " + cookiesAndCustomersPerHour[1];
         storeDisplay.appendChild(hour14);
         var totalSales = document.createElement('td');
-        totalSales.textContent = "Total: " + this.totalCookieIterations;
+        totalSales.textContent = "Display Total Sales: " + this.totalCookieIterations;
         storeDisplay.appendChild(totalSales);
         break;
     }
