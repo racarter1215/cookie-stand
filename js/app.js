@@ -110,6 +110,19 @@ StoreMaker.prototype.totalDaySalesTracker = function() {
   }
 }
 
+var formEl = document.getElementById("Create your own store form!");
+
+function generateForm(event) {
+  generateForm.preventDefault();
+  event.target.location.value;
+  event.target.minimumCustomers.value;
+  event.target.maximumCustomers.value;
+  event.target.averageCookieSales.value;
+}
+
+var nc = new StoreMaker(name, minimumCustomers, maximumCustomers, averageCookieSales);
+formEl.addEventListener('submit', generateForm);
+
 var seattle = new StoreMaker('Seattle', 23, 65, 6.3, 'item1');
 var tokyo = new StoreMaker('Tokyo', 3, 24, 1.2, 'item2');
 var dubai = new StoreMaker('Dubai', 11, 38, 3.7,'item3');
@@ -121,3 +134,5 @@ tokyo.totalDaySalesTracker();
 dubai.totalDaySalesTracker();
 paris.totalDaySalesTracker();
 lima.totalDaySalesTracker();
+writeBottomRow();
+
