@@ -2,13 +2,14 @@ body {
     font-family: sans-serif;
     background-color: peachpuff;
     color: maroon;
+    float: right;
 }
 
 div {
     margin-top: 500px;
 }
 
-article {
+table {
     font-family: Arial;
     float: left;
 }
@@ -17,3 +18,8 @@ text {
     font-family: Georgia;
 }
 
+img {
+    float: left;
+    width: 150px;
+    height: 150px;
+}
