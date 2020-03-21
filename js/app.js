@@ -30,6 +30,7 @@ StoreMaker.prototype.totalDaySalesTracker = function() {
 
     switch (index) {
       case 0:  
+        var tableEl = document.getElementById("salesTable")
         var storeDisplay = document.getElementById(this.item);
         var displayName = document.createElement('td');
         displayName.textContent = this.name;
