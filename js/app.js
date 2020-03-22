@@ -1,5 +1,7 @@
 'use strict';
 
+var allStoreArray = [];
+
 
 function StoreMaker(name, minimumCustomers, maximumCustomers, averageCookieSales, item) {
   this.name = name;
@@ -7,6 +9,7 @@ function StoreMaker(name, minimumCustomers, maximumCustomers, averageCookieSales
   this.maximumCustomers = maximumCustomers;
   this.averageCookieSales = averageCookieSales;
   this.item = item;
+  allStoreArray.push(this);
 }
 
 StoreMaker.prototype.totalCookieIterations = 0;
@@ -31,7 +34,7 @@ StoreMaker.prototype.totalDaySalesTracker = function() {
     switch (index) {
       case 0:  
         var tableEl = document.getElementById("salesTable")
-        var storeDisplay = document.getElementById(this.item);
+        var storeDisplay = document.createElement('tr');
         var displayName = document.createElement('td');
         displayName.textContent = this.name;
         storeDisplay.appendChild(displayName);
@@ -108,7 +111,7 @@ StoreMaker.prototype.totalDaySalesTracker = function() {
         storeDisplay.appendChild(totalSales);
         break;
     }
-  }
+  } tableEl.appendChild(storeDisplay);
 }
 
 
@@ -131,14 +134,23 @@ var formEl = document.getElementById('generateForm');
 
 function generateForm(event) {
   event.preventDefault();
-  var customerGeneratedData = event.target
-  var newStoreMaker = new StoreMaker(customerGeneratedData.name, customerGeneratedData.minimumCustomers, customerGeneratedData.maximumCustomers, customerGeneratedData.averageCookieSales);
-  footerRow.innerHTML = '';
-  renderTable.innerHTML = '';
-  footerRow();
-  renderTable();
+  var customerGeneratedData = event.target;
+  console.log(customerGeneratedData.name.value);
+  new StoreMaker(customerGeneratedData.name.value, customerGeneratedData.minimumcustomers.value, customerGeneratedData.maximumcustomers.value, customerGeneratedData.averagecookiessold.value);
+  // footerRow.innerHTML = '';
+  // renderTable.innerHTML = '';
+  // footerRow();
+  // renderTable();
+}
+var buttonEl = document.getElementById('button');
+
+function submitData(event) {
+  document.getElementById("salesTable").innerHTML = null;
+  for (var i = 0; i < allStoreArray.length; i++) {
+    allStoreArray[i].totalDaySalesTracker();
+  }
 }
 
 
-
-formEl.addEventListener('submit', generateForm());
+formEl.addEventListener('submit', generateForm);
+buttonEl.addEventListener('click', submitData);
